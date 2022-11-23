@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 namespace Homework5
 {
 public class User
 	{
-        private protected string _username;
-        private protected string _password;
-        public string Username
+        private string _username;
+        private string _password;
+        private protected string Username
         {
             get
             {
@@ -13,7 +20,7 @@ public class User
             }
             set
             {
-                if (value.Length>6)
+                if (value.Length<6)
                 {
                     _username = value;
                 }
@@ -23,7 +30,7 @@ public class User
                 }
             }
         }
-        public string Password
+        protected string Passwordd
         {
             get
             {
@@ -31,7 +38,7 @@ public class User
             }
             set
             {
-                if (value == value.ToLower() && value.Length < 1)
+                if (value == value.ToLower())
                 {
                     Console.WriteLine("Set correct password!");
                 }
@@ -45,7 +52,7 @@ public class User
         public User(string username, string password)
         {
             Username = username;
-            Password = password;
+            Passwordd = password;
         }
     }
 }
