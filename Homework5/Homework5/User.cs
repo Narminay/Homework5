@@ -3,8 +3,8 @@ namespace Homework5
 {
 public class User
 	{
-        private string _username;
-        private string _password;
+        private protected string _username;
+        private protected string _password;
         public string Username
         {
             get

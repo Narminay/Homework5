@@ -10,10 +10,10 @@ internal class Program
         Console.WriteLine("Password:");
         string Password = Console.ReadLine();
         Admin admin = new(true, "Slider section");
-        Console.WriteLine(admin.Return);
+        Console.WriteLine("IsSuperAdmin:" + admin.IsSuperAdmin);
+
+        Console.WriteLine("Section :" + admin.Section);
 
         Console.WriteLine("Admin:" + admin.Return());
     }
-
-
 }
